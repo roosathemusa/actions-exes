@@ -1,0 +1,11 @@
+name: T04 - Only feature1
+
+on:
+  push:
+    branches: [ feature1 ]   # vain feature1
+
+jobs:
+  only-feature1:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "This runs ONLY on feature1"
