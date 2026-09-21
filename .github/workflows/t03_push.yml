@@ -1,0 +1,12 @@
+name: T03 - Push trigger
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  on-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show branch ref
+        run: echo "Ref is $GITHUB_REF"
