@@ -1,0 +1,10 @@
+name: T01 - Hello
+on:
+  push:
+    branches: [ main ]
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print hello
+        run: echo "Hello Actions!"
