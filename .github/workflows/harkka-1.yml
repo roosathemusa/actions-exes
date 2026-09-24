@@ -1,0 +1,32 @@
+name: Kolme työtä
+
+on: push
+
+jobs:
+  test1:
+    name: Tulosta ikä 
+    needs: test3
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@4
+      - name: Ikä
+        run: echo "22"
+  test2:
+    name: Tulosta etunimi
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@4
+      - name: Etunimi
+        run: echo "Emilia"
+  test3:
+    name: Tulosta sukunimi
+    needs: test2
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@4
+      - name: Sukunimi
+        run: echo "Kaarre"
+        
+
+        
+
