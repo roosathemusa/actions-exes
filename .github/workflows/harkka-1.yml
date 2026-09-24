@@ -1,30 +1,20 @@
-name: Kolme työtä
+name: 3-jobs
 
-on: push
+on: workflow_dispatch
 
 jobs:
-  test1:
-    name: Tulosta ikä 
-    needs: test3
+  age-print:
+    needs: lname-print
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Ikä
         run: echo "22"
-  test2:
-    name: Tulosta etunimi
+  fname-print:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Etunimi
         run: echo "Emilia"
-  test3:
-    name: Tulosta sukunimi
-    needs: test2
+  lname-print:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Sukunimi
         run: echo "Kaarre"
         
 
